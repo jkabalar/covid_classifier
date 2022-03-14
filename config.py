@@ -5,7 +5,7 @@ from albumentations.pytorch import ToTensorV2
 SEED = 42
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 NUM_WORKERS = 1
-BATCH_SIZE = 16
+BATCH_SIZE = 32
 PIN_MEMORY = True
 LOAD_MODEL = True
 LEARNING_RATE = 1e-4
@@ -30,6 +30,7 @@ train_transforms = A.Compose([
 
 val_transforms = A.Compose([
     A.Resize(width=IMAGE_SIZE[0], height=IMAGE_SIZE[1],),
+    A.RandomCrop(width=IMAGE_SIZE[0], height=IMAGE_SIZE[1]),
     A.Normalize(
        mean=[0, 0, 0],
        std=[1, 1, 1],
