@@ -30,7 +30,6 @@ train_transforms = A.Compose([
 
 val_transforms = A.Compose([
     A.Resize(width=IMAGE_SIZE[0], height=IMAGE_SIZE[1],),
-    A.RandomCrop(width=IMAGE_SIZE[0], height=IMAGE_SIZE[1]),
     A.Normalize(
        mean=[0, 0, 0],
        std=[1, 1, 1],
