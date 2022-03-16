@@ -1,4 +1,4 @@
-Covid X-Ray Image Classification
+### Covid X-Ray Image Classification
 
 # Dataset is currently not provided
 The dataset folder includes ground-truth images of each class (310 negative and 150 positive). --> 
@@ -11,3 +11,5 @@ Here, we will freeze the weights for all of the network except that of the final
 
 # Requirements
 Installation of Pytorch - Python 3.8.
+
+Created March 2020
